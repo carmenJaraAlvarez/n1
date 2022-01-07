@@ -15,6 +15,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
         }
     }
 }*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
 Console.WriteLine("Hello, World!");
 //var
 byte age = 90;//0-255
@@ -85,7 +88,40 @@ int suma3()
 suma3();
 //array1 = array2; //>>un unico array 2 y ambas variables apuntan al mismo sitio de memoria.Array1 se destruye!!!
 //programacion101.net
+
+
 //matrix
 int[,] matrix1 = new int[2, 3];
 matrix1[0, 0] = 1;
 matrix1[1, 0] = 1;
+
+
+//lists
+List<int> l1 = new List<int>();
+l1.Add(1);
+l1.Add(20);
+l1.Add(77);
+l1.Add(77);
+l1.Insert(0, 2);//not overwrite, data 1 is now in pos 1
+Console.WriteLine(l1.Count);
+l1.Remove(77);//remove the first one
+l1.RemoveAt(0);//position
+Console.WriteLine(l1.Count);
+
+Console.WriteLine("**************************");
+foreach(int n in l1)
+{
+    Console.WriteLine(n);
+}
+Console.WriteLine(l1.IndexOf(1));
+l1.Clear();//remove all
+//dictionary
+Dictionary<string, string> colors = new Dictionary<string, string>();
+
+colors.Add("rojo", "red");
+colors.Add("verde","green");
+
+foreach (KeyValuePair<string, string> p in colors) //or (var p in colors)
+{
+    Console.WriteLine(p.Key+ "="+ p.Value);
+}

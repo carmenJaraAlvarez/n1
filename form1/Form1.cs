@@ -40,5 +40,40 @@ namespace form1
         {
             connecting.disconnect();
         }
+
+        private void lookforInBD_Click(object sender, EventArgs e)
+        {
+            resultView.DataSource = connecting.lookfor(lookfor.Text);
+        }
+
+        private void newData_Click(object sender, EventArgs e)
+        {
+            connecting.insert(colorname.Text, colorcode.Text);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void colorcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            connecting.Drop(colorname.Text);
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            connecting.Update(colorname.Text, colorcode.Text);
+        }
     }
 }

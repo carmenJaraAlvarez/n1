@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button_1 = new System.Windows.Forms.Button();
+            this.show_color = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,23 +44,34 @@
             this.label1.Text = "Color";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // Button_1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Location = new System.Drawing.Point(259, 215);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "show";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Button_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Button_1.Location = new System.Drawing.Point(259, 215);
+            this.Button_1.Name = "Button_1";
+            this.Button_1.Size = new System.Drawing.Size(94, 29);
+            this.Button_1.TabIndex = 1;
+            this.Button_1.Text = "show";
+            this.Button_1.UseVisualStyleBackColor = false;
+            this.Button_1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // show_color
+            // 
+            this.show_color.Location = new System.Drawing.Point(259, 283);
+            this.show_color.Name = "show_color";
+            this.show_color.Size = new System.Drawing.Size(94, 29);
+            this.show_color.TabIndex = 2;
+            this.show_color.Text = "show color";
+            this.show_color.UseVisualStyleBackColor = true;
+            this.show_color.Click += new System.EventHandler(this.show_color_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.show_color);
+            this.Controls.Add(this.Button_1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -71,6 +83,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button Button_1;
+        private Button show_color;
     }
 }

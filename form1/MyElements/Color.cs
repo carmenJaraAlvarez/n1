@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using form1;
 
 namespace Colors
 {
@@ -13,26 +14,27 @@ namespace Colors
         public MyColor()
         {
             colorname = "";
-            hexCode = "";
+            HexCode = "";
         }
         public MyColor(string cname, string hCode)
         {
             colorname = cname;
-            hexCode = hCode;
+            HexCode = hCode;
         }
-
-        public string getName()
+        //side atr crtl+.
+        public string HexCode { get => hexCode; set => hexCode = value; }
+        //the same:   public string HexCode { get; set;}
+        public string GetName()
         {
             return colorname;
         }
-        public void ShowName()
+        
+        public void ShowCode()
         {
-            System.Windows.Forms.MessageBox.Show(getName());
-        }
-
-        public void ShowColor()
-        {
+            System.Windows.Forms.MessageBox.Show(this.HexCode);
 
         }
+
+   
     }
 }

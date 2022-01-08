@@ -15,9 +15,16 @@ namespace form1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            Rojo.ShowName();
+            Rojo.HexCode = "new hex";
+            Rojo.ShowCode();
+            
+        }
+
+        private void show_color_Click(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Red;
         }
     }
 }

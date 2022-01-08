@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Button_1 = new System.Windows.Forms.Button();
             this.show_color = new System.Windows.Forms.Button();
+            this.connButton = new System.Windows.Forms.Button();
+            this.disconn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,11 +67,36 @@
             this.show_color.UseVisualStyleBackColor = true;
             this.show_color.Click += new System.EventHandler(this.show_color_Click);
             // 
+            // connButton
+            // 
+            this.connButton.ForeColor = System.Drawing.Color.OliveDrab;
+            this.connButton.Location = new System.Drawing.Point(597, 144);
+            this.connButton.Name = "connButton";
+            this.connButton.Size = new System.Drawing.Size(94, 29);
+            this.connButton.TabIndex = 3;
+            this.connButton.Text = "conn";
+            this.connButton.UseVisualStyleBackColor = true;
+            this.connButton.Click += new System.EventHandler(this.connButton_Click);
+            // 
+            // disconn
+            // 
+            this.disconn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.disconn.ForeColor = System.Drawing.Color.Snow;
+            this.disconn.Location = new System.Drawing.Point(597, 201);
+            this.disconn.Name = "disconn";
+            this.disconn.Size = new System.Drawing.Size(94, 29);
+            this.disconn.TabIndex = 4;
+            this.disconn.Text = "disconn";
+            this.disconn.UseVisualStyleBackColor = false;
+            this.disconn.Click += new System.EventHandler(this.disconn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.disconn);
+            this.Controls.Add(this.connButton);
             this.Controls.Add(this.show_color);
             this.Controls.Add(this.Button_1);
             this.Controls.Add(this.label1);
@@ -85,5 +112,7 @@
         private Label label1;
         private Button Button_1;
         private Button show_color;
+        private Button connButton;
+        private Button disconn;
     }
 }

@@ -21,8 +21,11 @@ try
 {
     FileStream fs = File.Create(path);
     byte[] info = new UTF8Encoding(true).GetBytes("Hi!!");
-    // Add some information to the file.
     fs.Write(info, 0, info.Length);
+    int l=info.Length;
+    fs.Close();
+    string info2 = "Hello!!";
+    File.AppendAllText(path, info2);
     fs.Close();
     StreamReader sr = File.OpenText(path);
     Console.WriteLine(sr.ReadLine());
